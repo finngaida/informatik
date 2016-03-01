@@ -1,0 +1,110 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, TurtleUnit,
+  StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private-Deklarationen}
+    procedure baum(Laenge: Real);
+    procedure colorchoose();
+  public
+    { Public-Deklarationen}
+    t:TTurtle;
+  end;
+
+type
+  rico = record
+  nickname:string;
+  penislaenge:longint;
+
+end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.DFM}
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+rico:rico;
+begin
+rico:=rico.create
+t:= TTurtle.create(SELF);
+t.Home;
+end;
+
+procedure TForm1.colorchoose();
+var
+cRed:Integer;
+cGreen:Integer;
+cBlue:Integer;
+begin
+
+ t.setColor(RGB(Random(255), Random(255), Random(255)));
+
+end;
+
+procedure TForm1.baum(Laenge: Real);
+var
+i:integer;
+BEGIN
+
+
+     for i:=0 to 10 do
+     begin
+     colorchoose();
+     t.forwd(Laenge/11);
+     end;
+
+     if Laenge > 25 then
+     begin
+         t.left(15);
+         baum(laenge*0.9);
+         t.Right(15);
+
+         t.Right(15);
+         baum(laenge*0.9);
+         t.Left(15);
+     end;
+
+    t.Back(Laenge);
+
+END;
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+laenge, i:Integer;
+begin
+
+t.penup;
+t.home;
+t.pendown;
+t.setWidth(5);
+
+for i:=0 to 18 do
+begin
+
+laenge:= 200;
+Repeat
+      baum(laenge);
+      laenge:=laenge-5;
+Until laenge < 30;
+
+
+
+t.right(20);
+
+end;
+end;
+end.
+ 
