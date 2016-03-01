@@ -1,0 +1,267 @@
+object Form1: TForm1
+  Left = 128
+  Height = 529
+  Top = 445
+  Width = 1635
+  Caption = 'Form1'
+  ClientHeight = 529
+  ClientWidth = 1635
+  OnCreate = FormCreate
+  LCLVersion = '1.2.6.0'
+  object Label1: TLabel
+    Left = 32
+    Height = 32
+    Top = 16
+    Width = 535
+    Caption = 'Ricos Fallbeschleunigungs-Rechner'
+    Font.Height = -27
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label1Click
+  end
+  object Label3: TLabel
+    Left = 17
+    Height = 15
+    Top = 64
+    Width = 60
+    Caption = 'Ich will auf '
+    ParentColor = False
+  end
+  object ComboBox1: TComboBox
+    Left = 81
+    Height = 23
+    Top = 58
+    Width = 120
+    ItemHeight = 15
+    OnChange = ComboBox1Change
+    TabOrder = 0
+    Text = 'Planet auswählen'
+  end
+  object Edit1: TEdit
+    Left = 48
+    Height = 23
+    Top = 136
+    Width = 56
+    TabOrder = 1
+    Text = '10'
+  end
+  object Button1: TButton
+    Left = 272
+    Height = 48
+    Top = 128
+    Width = 696
+    Caption = 'Take me to ...!'
+    Enabled = False
+    Font.Height = -27
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object ListBox1: TListBox
+    Left = 24
+    Height = 304
+    Top = 208
+    Width = 168
+    ItemHeight = 0
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 600
+    Height = 17
+    Top = 64
+    Width = 16
+    Caption = 'C'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object ListBox2: TListBox
+    Left = 216
+    Height = 304
+    Top = 208
+    Width = 176
+    ItemHeight = 0
+    TabOrder = 5
+  end
+  object ListBox3: TListBox
+    Left = 416
+    Height = 304
+    Top = 208
+    Width = 168
+    ItemHeight = 0
+    TabOrder = 6
+  end
+  object Label4: TLabel
+    Left = 211
+    Height = 15
+    Top = 64
+    Width = 314
+    Caption = 'aus                   m fallen. Dabei sollen diese Parameter gelten:'
+    ParentColor = False
+  end
+  object Edit2: TEdit
+    Left = 241
+    Height = 23
+    Top = 58
+    Width = 40
+    TabOrder = 7
+    Text = '1000'
+  end
+  object Chart1: TChart
+    Left = 992
+    Height = 480
+    Top = 24
+    Width = 624
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    ParentColor = False
+    object Chart1LineSeries1: TLineSeries
+      ShowPoints = True
+      Source = Source1
+    end
+  end
+  object ListBox4: TListBox
+    Left = 608
+    Height = 304
+    Top = 208
+    Width = 168
+    ItemHeight = 0
+    TabOrder = 9
+  end
+  object ListBox5: TListBox
+    Left = 800
+    Height = 304
+    Top = 208
+    Width = 168
+    ItemHeight = 0
+    TabOrder = 10
+  end
+  object Label6: TLabel
+    Left = 17
+    Height = 15
+    Top = 96
+    Width = 29
+    Caption = 'Sₓ0 = '
+    ParentColor = False
+  end
+  object Edit3: TEdit
+    Left = 48
+    Height = 23
+    Top = 96
+    Width = 56
+    TabOrder = 11
+    Text = '0'
+  end
+  object Label7: TLabel
+    Left = 136
+    Height = 15
+    Top = 96
+    Width = 25
+    Caption = 'sy = '
+    ParentColor = False
+  end
+  object Edit4: TEdit
+    Left = 167
+    Height = 23
+    Top = 96
+    Width = 56
+    TabOrder = 12
+    Text = '0'
+  end
+  object Label8: TLabel
+    Left = 256
+    Height = 15
+    Top = 96
+    Width = 30
+    Caption = 'Vₓ0 = '
+    ParentColor = False
+  end
+  object Edit5: TEdit
+    Left = 287
+    Height = 23
+    Top = 96
+    Width = 56
+    TabOrder = 13
+    Text = '0'
+  end
+  object Label9: TLabel
+    Left = 376
+    Height = 15
+    Top = 96
+    Width = 26
+    Caption = 'vy = '
+    ParentColor = False
+  end
+  object Edit6: TEdit
+    Left = 407
+    Height = 23
+    Top = 96
+    Width = 56
+    TabOrder = 14
+    Text = '0'
+  end
+  object Label10: TLabel
+    Left = 496
+    Height = 15
+    Top = 96
+    Width = 26
+    Caption = 'ay = '
+    ParentColor = False
+  end
+  object Edit7: TEdit
+    Left = 527
+    Height = 23
+    Top = 96
+    Width = 56
+    TabOrder = 15
+    Text = '0'
+  end
+  object Label11: TLabel
+    Left = 17
+    Height = 15
+    Top = 136
+    Width = 18
+    Caption = 't = '
+    ParentColor = False
+  end
+  object Edit8: TEdit
+    Left = 192
+    Height = 23
+    Top = 136
+    Width = 56
+    TabOrder = 16
+    Text = '0'
+  end
+  object Label12: TLabel
+    Left = 136
+    Height = 15
+    Top = 136
+    Width = 50
+    Caption = 'Sₒende = '
+    ParentColor = False
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    top = 8
+  end
+  object Source1: TListChartSource
+    left = 601
+    top = 7
+  end
+end
